@@ -38,7 +38,7 @@ export default function AnamInterviewLayout() {
   }, []);
 
   async function getSessionToken() {
-    const res = await fetch("http://localhost:5000/api/anam/session", {
+    const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/anam/session`, {
       method: "POST",
       headers: { "Content-Type": "application/json" }
     });
@@ -324,7 +324,7 @@ const styles = {
     boxSizing: "border-box"
   },
   
-  
+
   // --- LEFT SECTION (Videos) ---
   leftSection: {
     flex: 2, 
